@@ -2,15 +2,15 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 setuptools.setup(
-    name='simple-slackclient',
+    name='slackbot',
     version='0.1',
-    scripts=['simple-slackclient'],
+    scripts=['slackbot'],
     author="Chris George",
     author_email="chrisg1622@gmail.com",
     description="A simple slack API for python",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/chrisg1622/simple-slackclient",
+    url="https://github.com/chrisg1622/slackbot",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
