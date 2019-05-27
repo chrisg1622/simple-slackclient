@@ -20,6 +20,12 @@ class SlackBot:
             run_async=run_async,
             session=session
         )
+        self._channels_list = self.client.channels_list()
+
+    @property
+    def channel_ids(self):
+        response = self._channels_list.result()
+        return {channel['name']: channel['id'] for channel in response.data['channels']}
 
     def send_message(self, channel, message, as_user=True, **kwargs):
         return self.client.chat_postMessage(
