@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name='slackbot',
     version='0.1',
-    scripts=['slackbot'],
+    scripts=[],
     author="Chris George",
     author_email="chrisg1622@gmail.com",
     description="A simple slack API for python",
