@@ -3,7 +3,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 setuptools.setup(
     name='slackbot',
-    version='0.1',
+    version='0.1.1',
     scripts=[],
     author="Chris George",
     author_email="chrisg1622@gmail.com",

@@ -10,6 +10,7 @@ class SlackBot:
         if self.token is None:
             raise ValueError('Must provide slack API token. Can use environment variable "SLACK_API_TOKEN"')
         self.base_url = base_url or self.BASE_URL
+        self.run_async = run_async
         self.client = slack.WebClient(
             token=self.token,
             base_url=self.BASE_URL,
@@ -24,7 +25,7 @@ class SlackBot:
 
     @property
     def channel_ids(self):
-        response = self._channels_list.result()
+        response = self._channels_list.result() if self.run_async else self._channels_list
         return {channel['name']: channel['id'] for channel in response.data['channels']}
 
     def send_message(self, channel, message, as_user=True, **kwargs):
