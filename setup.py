@@ -2,7 +2,7 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 setuptools.setup(
-    name='slackbot',
+    name='simpleslackbot',
     version='0.1.0',
     scripts=[],
     author="Chris George",
